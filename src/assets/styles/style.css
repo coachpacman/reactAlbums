@@ -92,6 +92,13 @@ html {
 	background: lightgrey;
 	padding-top: 20px;
 	padding-left: 39px;
+	text-decoration: none;
+	color: black
+
+}
+
+a {
+	text-decoration: none;
 }
 
 .gallerySideBarButton:hover {

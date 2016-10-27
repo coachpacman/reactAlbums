@@ -32,7 +32,7 @@ const GalleryContainer = React.createClass({
 
 	render: function() {
 		return (
-			<PhotoGallery photos={this.state.photos} currentAlbumLabel={this.state.currentAlbumLabel} albums={this.state.albumLabels}/>
+			<PhotoGallery photos={this.state.photos} currentAlbumLabel={this.state.currentAlbumLabel} albumLabels={this.state.albumLabels}/>
 		)
 	}
 })
@@ -43,9 +43,11 @@ const PhotoGallery = React.createClass({
 			<div id="galleryContainer">
 				<div id="gallerySideBar">
 					<div id="gallerySideButtons">
-						{this.props.albums.map(function(item, i ) {
+						{this.props.albumLabels.map(function(item) {
 							return(
-								<div key={"gallery button" + item.album_label} className="gallerySideBarButton">{item.album_label}</div>	
+								<Link key={"gallery button link" + item.id}to={"/gallery/photo/" + item.id}>
+									<div key={"gallery button" + item.album_label} className="gallerySideBarButton">{item.album_label}</div>	
+								</Link>
 								)
 							}
 						)}
