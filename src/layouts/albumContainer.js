@@ -13,7 +13,9 @@ const AlbumsContainerData = React.createClass({
 		getData().then( resp => {
 			this.setState({
 				albums: resp.data
+
 			})
+			console.log(resp.data)
 		})
 	},
 
@@ -31,34 +33,15 @@ const AlbumsLayout = React.createClass({
 			<div id="albumHeader">Jamie's Gothic Photo Album</div>
 			<div id="albumContainer">
 				<div className="albumRow">
-				
-					<div className="albumThumb">
-						<img src="https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-puppy_1_000000018934_5.png"/>
-						<div className="albumFooter">Animals</div>
-					</div>
-					<div className="albumThumb">
-						<img src="https://s-media-cache-ak0.pinimg.com/236x/13/b8/35/13b8356a8dc3855d5398fd5ebc40fc26.jpg"/>
-						<div className="albumFooter">Angels</div>
-					</div>
-					<div className="albumThumb">
-						<img src="https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-rose_1_000000022325_5.png"/>
-						<div className="albumFooter">Roses</div>
-					</div>
-				
-
-					<div className="albumThumb">
-						<img src="https://s-media-cache-ak0.pinimg.com/236x/24/a5/2b/24a52bc97b240174d80b77fd7017a30a.jpg"/>
-						<div className="albumFooter">Elves</div>
-					</div>
-					<div className="albumThumb">
-						<img src="https://lh5.googleusercontent.com/-eZU5h6PTWfM/TXrqMl8gBBI/AAAAAAAAABs/QAYk5CeMhN8/s1600/butterfly.jpg"/>
-						<div className="albumFooter">butterfly</div>
-					</div>
-					<div className="albumThumb">
-						<div className="albumFooter">Architecture</div>
-					</div>
-
-
+					{this.props.albums.map(function(item) {
+							return (
+							<div key= {"album" + item.id} className="albumThumb">
+								<img src={item.album_cover_pic}/>
+								<div className="albumFooter">{item.album_label}</div>	
+							</div>
+							)
+						})
+					}
 				</div>
 			</div>
 		</div>
@@ -68,3 +51,34 @@ const AlbumsLayout = React.createClass({
 })
 
 export default AlbumsContainerData 
+
+
+// <div className="albumThumb">
+// 						<img src="https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-puppy_1_000000018934_5.png"/>
+// 						<div className="albumFooter">Animals</div>
+// 					</div>
+// 					<div className="albumThumb">
+// 						<img src="https://s-media-cache-ak0.pinimg.com/236x/13/b8/35/13b8356a8dc3855d5398fd5ebc40fc26.jpg"/>
+// 						<div className="albumFooter">Angels</div>
+// 					</div>
+// 					<div className="albumThumb">
+// 						<img src="https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-rose_1_000000022325_5.png"/>
+// 						<div className="albumFooter">Roses</div>
+// 					</div>
+				
+
+// 					<div className="albumThumb">
+// 						<img src="https://s-media-cache-ak0.pinimg.com/236x/24/a5/2b/24a52bc97b240174d80b77fd7017a30a.jpg"/>
+// 						<div className="albumFooter">Elves</div>
+// 					</div>
+// 					<div className="albumThumb">
+// 						<img src="https://lh5.googleusercontent.com/-eZU5h6PTWfM/TXrqMl8gBBI/AAAAAAAAABs/QAYk5CeMhN8/s1600/butterfly.jpg"/>
+// 						<div className="albumFooter">butterfly</div>
+// 					</div>
+// 					<div className="albumThumb">
+// 						<div className="albumFooter">Architecture</div>
+// 					</div>
+
+
+
+

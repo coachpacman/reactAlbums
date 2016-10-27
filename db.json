@@ -2,8 +2,8 @@
   "albums": [
     {
       "id": 1,
-      "album-cover-pic": "https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-puppy_1_000000018934_5.png",
-      "album-label": "Animals",
+      "album_cover_pic": "https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-puppy_1_000000018934_5.png",
+      "album_label": "Animals",
       "photos": [
         {
           "url": "https://s-media-cache-ak0.pinimg.com/originals/97/c5/1b/97c51bfe3fcf395aa6ee27a87df5230a.jpg",
@@ -33,8 +33,8 @@
     },
     {
       "id": 2,
-      "album-cover-pic": "https://s-media-cache-ak0.pinimg.com/236x/13/b8/35/13b8356a8dc3855d5398fd5ebc40fc26.jpg",
-      "album-label": "Angels",
+      "album_cover_pic": "https://s-media-cache-ak0.pinimg.com/236x/13/b8/35/13b8356a8dc3855d5398fd5ebc40fc26.jpg",
+      "album_label": "Angels",
       "photos": [
         {
           "url": "http://img02.deviantart.net/25ad/i/2009/102/7/b/___gothic_angel____by_morbidiamorthel.jpg",
@@ -64,8 +64,8 @@
     },
     {
       "id": 3,
-      "album-cover-pic": "https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-rose_1_000000022325_5.png",
-      "album-label": "Roses",
+      "album_cover_pic": "https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-rose_1_000000022325_5.png",
+      "album_label": "Roses",
       "photos": [
         {
           "url": "http://cdn.wallpapersafari.com/39/94/flv3mK.jpg",
@@ -95,8 +95,8 @@
     },
     {
       "id": 4,
-      "album-cover-pic": "https://s-media-cache-ak0.pinimg.com/236x/24/a5/2b/24a52bc97b240174d80b77fd7017a30a.jpg",
-      "album-label": "Elves",
+      "album_cover_pic": "https://s-media-cache-ak0.pinimg.com/236x/24/a5/2b/24a52bc97b240174d80b77fd7017a30a.jpg",
+      "album_label": "Elves",
       "photos": [
         {
           "url": "http://cdn.gothic.life/wp-content/uploads/2016/01/Model-Ron-Ange-Harper-Photograhy-600x399.jpg",
@@ -126,8 +126,8 @@
     },
     {
       "id": 5,
-      "album-cover-pic": "https://lh5.googleusercontent.com/-eZU5h6PTWfM/TXrqMl8gBBI/AAAAAAAAABs/QAYk5CeMhN8/s1600/butterfly.jpg",
-      "album-label": "Butterflies",
+      "album_cover_pic": "https://lh5.googleusercontent.com/-eZU5h6PTWfM/TXrqMl8gBBI/AAAAAAAAABs/QAYk5CeMhN8/s1600/butterfly.jpg",
+      "album_label": "Butterflies",
       "photos": [
         {
           "url": "http://img06.deviantart.net/4909/i/2013/003/b/b/gothic_butterfly_by_arwenarianna-d5qb04g.jpg",
@@ -157,8 +157,8 @@
     },
     {
       "id": 6,
-      "album-cover-pic": "https://s-media-cache-ak0.pinimg.com/originals/61/fb/e3/61fbe3308f9f24a3112f1e79db4750cf.jpg",
-      "album-label": "Architecture",
+      "album_cover_pic": "https://s-media-cache-ak0.pinimg.com/originals/61/fb/e3/61fbe3308f9f24a3112f1e79db4750cf.jpg",
+      "album_label": "Architecture",
       "photos": [
         {
           "url": "https://i.ytimg.com/vi/t8g1e-JLrhM/maxresdefault.jpg",
