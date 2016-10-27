@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, hashHistory } from 'react-router';
 
-require('assets/styles/style.css')
+import 'assets/styles/style.css'
 
 // Layouts
-import App from 'layouts/app';
+import Container from 'layouts/container';
+import AlbumContainer from 'layouts/albumContainer'
+import GalleryContainer from 'layouts/galleryContainer'
+import PhotoContainer from 'layouts/photoContainer'
 
 ReactDOM.render((
-  <Router history={browserHistory}>
-    <Route component={App}>
-      
+  <Router history={hashHistory}>
+    <Route component={Container}>
+  		<Route path="/" component={AlbumContainer}/>
+  		<Route path="/gallery/:albumId" component={GalleryContainer}/>
+  		<Route path="/gallery/:albumId/:photoId" component={PhotoContainer}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

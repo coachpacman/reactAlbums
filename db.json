@@ -1,16 +1,190 @@
 {
-  "users": [
+  "albums": [
     {
       "id": 1,
-      "name": "Mike"
+      "album-cover-pic": "https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-puppy_1_000000018934_5.png",
+      "album-label": "Animals",
+      "photos": [
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/originals/97/c5/1b/97c51bfe3fcf395aa6ee27a87df5230a.jpg",
+          "id": "1",
+        },
+        {
+          "url": "http://36.media.tumblr.com/caacb228389333060273ccc4c62e56f1/tumblr_nk9ev90kD81skelofo1_500.jpg",
+          "id": "2",
+        },
+        {
+          "url": "http://img00.deviantart.net/6497/i/2015/009/4/6/gothic_corsage_horse_by_undeadhoney-d8d73iv.png",
+          "id": "3",
+        },
+        {
+          "url": "https://dncache-mauganscorp.netdna-ssl.com/thumbseg/1591/1591674-bigthumbnail.jpg",
+          "id": "4",
+        },
+        {
+          "url": "https://dncache-mauganscorp.netdna-ssl.com/thumbseg/1451/1451144-bigthumbnail.jpg",
+          "id": "5",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/564x/ef/f1/16/eff116e578cd4c732974ae7c5d0a61b1.jpg",
+          "id": "6",
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Jeff"
+      "album-cover-pic": "https://s-media-cache-ak0.pinimg.com/236x/13/b8/35/13b8356a8dc3855d5398fd5ebc40fc26.jpg",
+      "album-label": "Angels",
+      "photos": [
+        {
+          "url": "http://img02.deviantart.net/25ad/i/2009/102/7/b/___gothic_angel____by_morbidiamorthel.jpg",
+          "id": "1",
+        },
+        {
+          "url": "http://i645.photobucket.com/albums/uu177/xoxoMiya/Gothic%20Angels/angel-1.jpg",
+          "id": "2",
+        },
+        {
+          "url": "http://www.wallpapersxl.com/wallpapers/1024x768/gothic-angels/124826/gothic-angels-gothicangel-124825.6.jpg",
+          "id": "3",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/originals/6b/41/f7/6b41f759b5e43c92c2b0053c17204202.jpg",
+          "id": "4",
+        },
+        {
+          "url": "http://www.tr3d.com/up/wallpaper/1f.jpg",
+          "id": "5",
+        },
+        {
+          "url": "http://previews.123rf.com/images/dankalilly/dankalilly1101/dankalilly110100036/8671895-a-dark-gothic-angel-black-knight-with-a-sword-and-a-lantern-in-his-hand-Stock-Vector.jpg",
+          "id": "6",
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "Gabe"
+      "album-cover-pic": "https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-gothic-rose_1_000000022325_5.png",
+      "album-label": "Roses",
+      "photos": [
+        {
+          "url": "http://cdn.wallpapersafari.com/39/94/flv3mK.jpg",
+          "id": "1",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/originals/d7/39/38/d73938074e5c12fda5f4df56f5c17117.jpg",
+          "id": "2",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/originals/19/94/fc/1994fcf71534f9207b569d2f1e683992.jpg",
+          "id": "3",
+        },
+        {
+          "url": "https://emiliajordan.files.wordpress.com/2012/06/dark-rose-2-rose-dark-gothic-roses-flowers-flowersroses-mi-album-ceca-flowersheartlip-flowers_large.jpg",
+          "id": "4",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/originals/1a/a5/8e/1aa58ebc50d1c337d3789b85a35cc6ce.jpg",
+          "id": "5",
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7eFsKoV_8QY/hqdefault.jpg",
+          "id": "6",
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "album-cover-pic": "https://s-media-cache-ak0.pinimg.com/236x/24/a5/2b/24a52bc97b240174d80b77fd7017a30a.jpg",
+      "album-label": "Elves",
+      "photos": [
+        {
+          "url": "http://cdn.gothic.life/wp-content/uploads/2016/01/Model-Ron-Ange-Harper-Photograhy-600x399.jpg",
+          "id": "1",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/564x/a2/50/55/a25055b9093ae186c64fcba598f4e6af.jpg",
+          "id": "2",
+        },
+        {
+          "url": "http://img03.deviantart.net/afff/i/2015/048/e/d/elf__by_psychara-d8if3nt.jpg",
+          "id": "3",
+        },
+        {
+          "url": "http://dark.pozadia.org/images/wallpapers/18207967/Warrioirs/Fantasy%20Elf%20Warrior.jpg",
+          "id": "4",
+        },
+        {
+          "url": "http://ayay.co.uk/backgrounds/rpg_games/neverwinter_nights/elven-female-fighter-battling-balrog-demon.jpg",
+          "id": "5",
+        },
+        {
+          "url": "http://img.wallpaperfolder.com/f/782EA1324D1F/evil-look-dark-gothic-free.jpg",
+          "id": "6",
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "album-cover-pic": "https://lh5.googleusercontent.com/-eZU5h6PTWfM/TXrqMl8gBBI/AAAAAAAAABs/QAYk5CeMhN8/s1600/butterfly.jpg",
+      "album-label": "Butterflies",
+      "photos": [
+        {
+          "url": "http://img06.deviantart.net/4909/i/2013/003/b/b/gothic_butterfly_by_arwenarianna-d5qb04g.jpg",
+          "id": "1",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/564x/73/01/1c/73011c01706e10e954a169c16817e3ab.jpg",
+          "id": "2",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/564x/73/01/1c/73011c01706e10e954a169c16817e3ab.jpg",
+          "id": "3",
+        },
+        {
+          "url": "http://www.fotothing.com/photos/017/017124ad21b28fda5ff3248fc6cc72fe.jpg",
+          "id": "4",
+        },
+        {
+          "url": "http://zodiac-city.e-monsite.com/medias/images/darkbutterfly.jpg",
+          "id": "5",
+        },
+        {
+          "url": "https://img.ifcdn.com/images/2d5455524c4de586d4778dbab4089e402ed269b70cb6efa62de7177ad6f2c789_3.jpg",
+          "id": "6",
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "album-cover-pic": "https://s-media-cache-ak0.pinimg.com/originals/61/fb/e3/61fbe3308f9f24a3112f1e79db4750cf.jpg",
+      "album-label": "Architecture",
+      "photos": [
+        {
+          "url": "https://i.ytimg.com/vi/t8g1e-JLrhM/maxresdefault.jpg",
+          "id": "1",
+        },
+        {
+          "url": "http://0.tqn.com/d/architecture/1/S/U/n/1/stdenis-181929107.jpg",
+          "id": "2",
+        },
+        {
+          "url": "https://thepocketscroll.files.wordpress.com/2012/08/paris-week-1-084.jpg",
+          "id": "3",
+        },
+        {
+          "url": "https://s-media-cache-ak0.pinimg.com/originals/96/fa/88/96fa88753bb61b5d9e9eabb1316b2111.png",
+          "id": "4",
+        },
+        {
+          "url": "http://36.media.tumblr.com/d84df6f7ea809c6e2f96a30d0df90a69/tumblr_n5ckzvzX6y1qghvlso1_500.jpg",
+          "id": "5",
+        },
+        {
+          "url": "http://www.ukwanderer.com/wp-content/uploads/2012/11/York-Minsters-west-facade-Simon-Cocks.jpg",
+          "id": "6",
+        }
+      ]
     }
   ]
 }
