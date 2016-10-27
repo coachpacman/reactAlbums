@@ -1,0 +1,131 @@
+html {
+	box-sizing: border-box;
+	height: 1000px;
+}
+
+*, *:after, *:before {
+	box-sizing: inherit;
+}
+
+#albumContainer {
+	width: 90%;
+	margin: auto;
+}
+
+.verticalAlign {
+	vertical-align: middle;
+}
+
+.albumRow, .galleryRow { 
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#albumHeader {
+	background: grey;
+	height: 200px;
+	text-align: center;
+	padding-top: 30px;
+	color: white;
+	font-family: "Indie Flower", cursive;
+	font-size: 100px;
+}
+
+.albumThumb, .photoThumb {
+	height: 350px;
+	width: 350px;
+	background: darkSeaGreen;
+	position: relative;
+	border-radius: 2%;
+	box-shadow: 0 0 0 0;
+	margin-top: 25px;
+} 
+
+.albumThumb > img {
+	height: 350px;
+	width: 350px;
+	border-radius: 2%;
+}
+
+.albumThumb:hover, .photoThumb:hover {
+	box-shadow: 10px 10px 5px #888888;
+	transition: box-shadow 0.5s;
+}
+
+.albumFooter, .photoFooter {
+	height: 50px;
+	width: 350px;
+	background: purple;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	padding-top: 17px;
+}
+
+#gallerySideBar {
+	width: 200px;
+	height: 1000px;
+	background: grey;
+	padding-top: 300px;
+	float: left;
+	
+}
+
+#gallerySideButtons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: grey;
+	width: 200px;
+	height: 434px;
+}
+
+.gallerySideBarButton {
+	height: 60px;
+	width: 200px;
+	background: lightgrey;
+	padding-top: 20px;
+	padding-left: 39px;
+}
+
+.gallerySideBarButton:hover {
+	background: darkgrey;
+	transition: background 0.5s
+}
+
+#galleryContainer {
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+#galleryHeader {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 70px;
+	font-family: "Indie Flower", cursive;
+	font-weight: bold;
+}
+
+#photoContainerHeader {
+	text-align: center;
+	font-size: 70px;
+	font-family: "Indie Flower", cursive;
+	font-weight: bold;
+}
+
+#photoContainer {
+	background: lightgrey;
+	height: 1000px;
+	width: 100%;
+}
+
+#photo {
+	background: darkSeaGreen;
+	height: 600px;
+	width: 700px;
+	border-radius: 2%;
+	margin: auto;
+	margin-top: 50px;
+}
