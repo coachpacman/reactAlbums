@@ -15,7 +15,7 @@ ReactDOM.render((
     <Route component={Container}>
   		<Route path="/" component={AlbumContainer}/>
   		<Route path="/gallery/:albumId" component={GalleryContainer}/>
-  		<Route path="/gallery/:albumId/:photoId" component={PhotoContainer}/>
+  		<Route path="/gallery/photo/:photoId" component={PhotoContainer}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

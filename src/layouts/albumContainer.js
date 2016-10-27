@@ -13,7 +13,6 @@ const AlbumsContainerData = React.createClass({
 		getData().then( resp => {
 			this.setState({
 				albums: resp.data
-
 			})
 			console.log(resp.data)
 		})
@@ -35,13 +34,14 @@ const AlbumsLayout = React.createClass({
 				<div className="albumRow">
 					{this.props.albums.map(function(item) {
 							return (
-							<div key= {"album" + item.id} className="albumThumb">
-								<img src={item.album_cover_pic}/>
-								<div className="albumFooter">{item.album_label}</div>	
-							</div>
+							<Link key={"album" + item.id} to={"/gallery/" + item.id}>
+								<div key={"album" + item.id} className="albumThumb">
+									<img src={item.album_cover_pic}/>
+									<div className="albumFooter">{item.album_label}</div>	
+								</div>
+							</Link>
 							)
-						})
-					}
+						})}
 				</div>
 			</div>
 		</div>

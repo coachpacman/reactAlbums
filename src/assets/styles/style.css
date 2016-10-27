@@ -42,7 +42,7 @@ html {
 	margin-top: 25px;
 } 
 
-.albumThumb > img {
+.albumThumb > img, .photoThumb > img {
 	height: 350px;
 	width: 350px;
 	border-radius: 2%;
