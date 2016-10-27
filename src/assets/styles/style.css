@@ -61,6 +61,9 @@ html {
 	bottom: 0;
 	text-align: center;
 	padding-top: 17px;
+	font-family: "Indie Flower", cursive;
+	color: black
+
 }
 
 #gallerySideBar {
@@ -79,6 +82,8 @@ html {
 	background: grey;
 	width: 200px;
 	height: 434px;
+	font-family: "Indie Flower", cursive
+
 }
 
 .gallerySideBarButton {

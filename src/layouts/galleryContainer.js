@@ -46,7 +46,7 @@ const PhotoGallery = React.createClass({
 						{this.props.albums.map(function(item, i ) {
 							return(
 								<div key={"gallery button" + item.album_label} className="gallerySideBarButton">{item.album_label}</div>	
-							)
+								)
 							}
 						)}
 					</div>
@@ -57,7 +57,7 @@ const PhotoGallery = React.createClass({
 						{this.props.photos.map(function(item) {
 							return (
 								<div key={"photo" + item.id} className="photoThumb"><img src={item.url}/>
-									<div className="photoFooter">Photo #{item.id}</div>
+									<div className="photoFooter">#{item.id}</div>
 								</div>
 							)
 						})}		
