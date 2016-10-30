@@ -1,42 +1,47 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { getAlbumData, getData } from 'apis/api'
+import store from 'store'
 
 
 const GalleryContainer = React.createClass({
 	getInitialState: function() {
 		return {
-			albums: [],
-			currentAlbumLabel: "",
-			photos: []
+			albums: []	
+			// currentAlbumLabel: "",
+			// photos: []
 		}
 	},
 	
 	componentWillMount: function() {
-		this.rerender()
+		getData()
+
+		this.unsubscribe=store.subscribe(() => {
+			const appState = store.getState()
+			this.setState({
+				albums: appState.albums
+			})
+		})
+
+		getAlbumData(this.props.params.albumId)
+
+		this.unsubscribe=store.subscribe(() => {
+			const appState = store.getState()
+			this.setState({
+				currentAlbumLabel: appState.currentAlbumLabel,
+			})
+		})
+		console.log("application state", store.getState())
 	},
 
-	rerender: function() {
-		
-		getData().then(resp => {
-			this.setState({
-				albums: resp.data
-			})
-			
-		})
-
-		getAlbumData(this.props.params.albumId).then(resp => {			
-			this.setState({
-				currentAlbumLabel: resp.data.album_label,
-				photos: resp.data.photos
-			})
-		})
+	componentWillUnmount: function() {
+		this.unsubscribe()
 	},
 
 	render: function() {
 		return (
-			<PhotoGallery rerender={this.rerender} photos={this.state.photos} currentAlbumLabel={this.state.currentAlbumLabel} albums={this.state.albums}/>
-		)
+			<PhotoGallery albums={this.state.albums} currentAlbumLabel={this.state.currentAlbumLabel}/>
+		)	
 	}
 })
 
@@ -50,10 +55,13 @@ const PhotoGallery = React.createClass({
 			<div id="galleryContainer">
 				<div id="gallerySideBar">
 					<div id="gallerySideButtons">
-						{this.props.albums.map(item => {
+						<Link key="gallery button home link" to="/">
+								<div key="gallery button home" className="gallerySideBarButton">Home</div>	
+						</Link>
+						{this.props.albums.map(function(item) {
 							return(
 								<Link key={"gallery button link" + item.id} to={"/gallery/" + item.id}>
-									<div onClick={this.props.rerender} key={"gallery button" + item.album_label} className="gallerySideBarButton">{item.album_label}</div>	
+									<div key={"gallery button" + item.album_label} className="gallerySideBarButton">{item.album_label}</div>	
 								</Link>
 								)
 							}
@@ -62,17 +70,6 @@ const PhotoGallery = React.createClass({
 				</div>
 				<div id="galleryContent">
 					<div id="galleryHeader">{this.props.currentAlbumLabel}</div>
-					<div className="galleryRow">
-						{this.props.photos.map(function(item) {
-							return (
-								<Link key={"gallery button link" + item.id}to={"/gallery/photo/" + item.id}>
-									<div key={"photo" + item.id} className="photoThumb"><img src={item.url}/>
-										<div className="photoFooter">#{item.id}</div>
-									</div>
-								</Link>
-							)
-						})}		
-					</div>	
 				</div>
 			</div>
 		)
@@ -81,5 +78,22 @@ const PhotoGallery = React.createClass({
 
 export default GalleryContainer
 
+//PROPS FOR ALBUM HEADER LABEL AND PHOTOS
+// photos={this.state.photos} currentAlbumLabel={this.state.currentAlbumLabel}
 
+//JSX FOR RENDERING PHOTOS AND ALBUM HEADER LABEL
 
+// asdf
+
+// <div className="galleryRow">
+// 		{this.props.photos.map(function(item) {
+// 							return (
+// 								<Link key={"gallery button link" + item.id}to={"/gallery/photo/" + item.id}>
+// 									<div key={"photo" + item.id} className="photoThumb"><img src={item.url}/>
+// 										<div className="photoFooter">#{item.id}</div>
+// 									</div>
+// 								</Link>
+// 							)
+// 						})}					
+// </div>	
+	

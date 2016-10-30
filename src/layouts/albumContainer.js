@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { getData } from 'apis/api'
+import store from 'store'
 
 const AlbumsContainerData = React.createClass({
 	getInitialState: function() {
@@ -10,12 +11,18 @@ const AlbumsContainerData = React.createClass({
 	},
 
 	componentWillMount: function() {
-		getData().then( resp => {
+		getData()
+
+		this.unsubscribe=store.subscribe(() => {
+			const appState = store.getState()
 			this.setState({
-				albums: resp.data
-			})
-			console.log(resp.data)
+				albums: appState.albums
+			})	
 		})
+	},
+
+	componentWillUnmount: function() {
+		this.unsubscribe()
 	},
 
 	render: function() {
