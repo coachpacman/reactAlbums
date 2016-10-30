@@ -18,6 +18,15 @@ export function getAlbumData(id) {
 			type: 'GET_ALBUM',
 			currentAlbumLabel: resp.data.album_label
 		})
-		console.log("getAlbumData() response",resp.data.album_label)
+	})
+}
+
+export function getPhotos(id) {
+	return axios.get(`photos?albumId=${id}`).then(function(resp) {
+		store.dispatch({
+			type: 'GET_PHOTOS',
+			photos: resp.data
+		})
+		console.log("getPhotos resp", resp)
 	})
 }
