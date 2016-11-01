@@ -27,6 +27,15 @@ export function getPhotos(id) {
 			type: 'GET_PHOTOS',
 			photos: resp.data
 		})
-		console.log("getPhotos resp", resp)
+	})
+}
+
+export function getPhoto(id) {
+	return axios.get(`photos/${id}`).then(function(resp) {
+		store.dispatch({
+			type: 'GET_PHOTO',
+			currentPhoto: resp.data.url,
+			currentPhotoId: resp.data.id
+		})
 	})
 }

@@ -42,7 +42,7 @@ const GalleryContainer = React.createClass({
 
 const PhotoGallery = React.createClass({
 	
-	clickHandler:(item) => {
+	clickHandler:function(item) {
 		getAlbumData(item.id);
 		getPhotos(item.id);
 	},
@@ -56,13 +56,13 @@ const PhotoGallery = React.createClass({
 						<Link key="gallery button home link" to="/">
 								<div key="gallery button home" className="gallerySideBarButton">Home</div>	
 						</Link>
-						{this.props.albums.map((item) => {
+						{this.props.albums.map(function(item){
 							return(
 								<Link key={"gallery button link" + item.id} to={"/gallery/" + item.id}>
 									<div key={"gallery button" + item.album_label} className="gallerySideBarButton" onClick={() => this.clickHandler(item)}>{item.album_label}</div>	
 								</Link>
 								)
-							}
+							}.bind(this)
 						)}
 					</div>
 				</div>

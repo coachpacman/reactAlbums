@@ -61,9 +61,6 @@ html {
 	bottom: 0;
 	text-align: center;
 	padding-top: 17px;
-	font-family: "Indie Flower", cursive;
-	color: black
-
 }
 
 #gallerySideBar {
@@ -82,8 +79,6 @@ html {
 	background: grey;
 	width: 200px;
 	height: 434px;
-	font-family: "Indie Flower", cursive
-
 }
 
 .gallerySideBarButton {
@@ -92,13 +87,6 @@ html {
 	background: lightgrey;
 	padding-top: 20px;
 	padding-left: 39px;
-	text-decoration: none;
-	color: black
-
-}
-
-a {
-	text-decoration: none;
 }
 
 .gallerySideBarButton:hover {
@@ -131,6 +119,7 @@ a {
 	background: lightgrey;
 	height: 1000px;
 	width: 100%;
+	position: relative;
 }
 
 #photo {
@@ -140,4 +129,20 @@ a {
 	border-radius: 2%;
 	margin: auto;
 	margin-top: 50px;
+	padding: 20px;
+}
+
+#photo > img {
+	height: 100%;
+	width: 100%;
+	border-radius: 2%;
+}
+
+#goBack {
+	height: 100px;
+	width: 100px;
+	background: red;
+	position: absolute;
+	top: 30%;
+	left: 10%;
 }
