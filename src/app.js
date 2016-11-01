@@ -6,9 +6,12 @@ import 'assets/styles/style.css'
 
 // Layouts
 import Container from 'layouts/container';
-import AlbumContainer from 'layouts/albumContainer'
-import GalleryContainer from 'layouts/galleryContainer'
-import PhotoContainer from 'layouts/photoContainer'
+
+//Content
+import AlbumContainer from 'ui/albumContainer'
+import GalleryContainer from 'ui/galleryContainer'
+import PhotoContainer from 'ui/photoContainer'
+import NewAlbum from 'ui/newAlbumForm'
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -16,6 +19,7 @@ ReactDOM.render((
   		<Route path="/" component={AlbumContainer}/>
   		<Route path="/gallery/:albumId" component={GalleryContainer}/>
   		<Route path="/gallery/photo/:photoId" component={PhotoContainer}/>
+  		<Route path="/newAlbum" component={NewAlbum}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

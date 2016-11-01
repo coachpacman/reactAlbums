@@ -51,6 +51,7 @@ const AlbumsLayout = React.createClass({
 						})}
 				</div>
 			</div>
+			<Link className="addButton" to="/newAlbum"><div>Add Album</div></Link>
 		</div>
 
 		)
