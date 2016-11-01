@@ -32,6 +32,14 @@ html {
 	font-size: 100px;
 }
 
+a {
+	font-family: "Indie Flower", cursive;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
 .albumThumb, .photoThumb {
 	height: 350px;
 	width: 350px;
