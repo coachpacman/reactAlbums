@@ -1,16 +1,12 @@
 import React from 'react'
 import { hashHistory, Link } from 'react-router'
 import store from 'store'
-import { updateAlbum, addPhotos } from 'apis/api'
+import { updateAlbum } from 'apis/api'
 
 
 
 
 const AlbumForm = React.createClass({
-	goBack: function(e) {	
-		e.preventDefault()
-		hashHistory.goBack()
-	},
 
 	getInitialState: function() {
 		return {
@@ -33,14 +29,12 @@ const AlbumForm = React.createClass({
 			album_label: this.state.album_label,
 			album_cover_pic: this.state.album_cover_pic
 		}
-
-		var id = data
-
-		console.log("imported data from db.json", id)
-
-		updateAlbum(obj).then(function(resp) {
-			hashHistory.push('/')
+		var id = this.props.params.id
+		updateAlbum(id, obj).then(resp => {
+				hashHistory.push(`/gallery/${this.props.params.id}`)
 		})	
+
+
 	}, 
 
 	// updatePhotosAPI: function() { 
@@ -55,7 +49,7 @@ const AlbumForm = React.createClass({
 	// },
 
 	postToAPI: function() { 
-		this.updateAlbumsAPI()
+		this.updateAlbum()
 		// this.updatePhotosAPI()
 		// console.log(this.state)
 	},
@@ -65,9 +59,8 @@ const AlbumForm = React.createClass({
 			<div>
 				<input className="formInput" id="album_label" onChange={this.update} type="text" placeholder="Album Name"></input>
 				<input className="formInput" id="album_cover_pic" onChange={this.update} type="text" placeholder="Album Cover Pic URL"></input>
-				<input className="formInput" id="url" onChange={this.update} type="text" placeholder="photo 1 url"></input>
-				<button onClick={this.postToAPI}>Post to API</button>
-				<button id="goBack" onClick={this.goBack}>Go Back</button>
+				<button onClick={this.postToAPI}>Submit</button>
+				<button id="goBack" onClick={this.goBack}>Cancel</button>
 			</div>
 		)
 	}

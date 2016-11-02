@@ -40,7 +40,6 @@ const AlbumsLayout = React.createClass({
 		}
 
 		addAlbum(obj)
-		console.log('params', this.props.params)
 	},	
 
 	render: function() {
