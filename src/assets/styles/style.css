@@ -161,8 +161,24 @@ a {
 	margin: auto;
 	margin-top: 25px;
 	font-size: 75px;
-	background: green;
+	background: white;
+	transition: background 0.5s;
 	width: 32%;
 	vertical-align: middle;
 	border-radius: 20px;
+	border: none;
+	font-family: "Indie Flower", cursive;
 }
+
+.addButton:hover {
+	background: #47dc19;
+
+}
+
+.addButton2 {
+	margin-left: 26%;
+}
+
+
+
+

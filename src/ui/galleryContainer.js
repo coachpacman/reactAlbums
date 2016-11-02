@@ -84,7 +84,7 @@ const PhotoGallery = React.createClass({
 							)
 						})}					
 					</div>	
-					<button onClick={this.navToAddPhoto}>Add Photo</button>
+					<button className="addButton addButton2" onClick={this.navToAddPhoto}>Add Photo</button>
 				</div> 
 			</div>
 		)
