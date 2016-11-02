@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { getData } from 'apis/api'
+import { getData, addAlbum } from 'apis/api'
 import store from 'store'
 
 const AlbumsContainerData = React.createClass({
@@ -33,6 +33,16 @@ const AlbumsContainerData = React.createClass({
 })
 
 const AlbumsLayout = React.createClass({
+	addAlbum: function() { 
+		var obj = {
+			album_label: "",
+			album_cover_pic: ""
+		}
+
+		addAlbum(obj)
+		console.log('params', this.props.params)
+	},	
+
 	render: function() {
 		return (
 		<div id="albumsContainer">
@@ -51,7 +61,7 @@ const AlbumsLayout = React.createClass({
 						})}
 				</div>
 			</div>
-			<Link className="addButton" to="/newAlbum"><div>Add Album</div></Link>
+			<a className="addButton" onClick={() => this.addAlbum()}><div>Add Album</div></a>
 		</div>
 
 		)
@@ -60,5 +70,7 @@ const AlbumsLayout = React.createClass({
 
 export default AlbumsContainerData 
 
+
+// href={"http://localhost:8001//newAlbums/" + this.props.params.id}
 
 
