@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { hashHistory, Link } from 'react-router'
 import { getAlbumData, getData, getPhotos } from 'apis/api'
 import store from 'store'
 
@@ -20,22 +20,22 @@ const GalleryContainer = React.createClass({
 
 		this.unsubscribe = store.subscribe(() => {
 			this.setState({
+				albumId: this.props.params.albumId,
 				albums: store.getState().albums,
 				currentAlbumLabel: store.getState().currentAlbumLabel,
 				photos: store.getState().photos
 			});
 		});
 	},
+	
 	componentWillUnmount: function() {
 		this.unsubscribe();
 	},
 
-	
-
 	render: function() {
 		
 		return (
-			<PhotoGallery albums={this.state.albums} currentAlbumLabel={this.state.currentAlbumLabel} photos={this.state.photos}/>
+			<PhotoGallery albumId={this.state.albumId} albums={this.state.albums} currentAlbumLabel={this.state.currentAlbumLabel} photos={this.state.photos}/>
 		)	
 	}
 })
@@ -45,6 +45,11 @@ const PhotoGallery = React.createClass({
 	clickHandler:function(item) {
 		getAlbumData(item.id);
 		getPhotos(item.id);
+	},
+
+	navToAddPhoto: function(e) {
+		e.preventDefault()
+		hashHistory.push(`/gallery/${this.props.albumId}/add`)
 	},
 
 	render: function() {
@@ -79,14 +84,14 @@ const PhotoGallery = React.createClass({
 							)
 						})}					
 					</div>	
-				</div>
+					<button onClick={this.navToAddPhoto}>Add Photo</button>
+				</div> 
 			</div>
 		)
 	}
 })
 
 export default GalleryContainer
-
 
 
 

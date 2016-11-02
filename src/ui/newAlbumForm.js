@@ -1,6 +1,5 @@
 import React from 'react'
 import { hashHistory, Link } from 'react-router'
-import store from 'store'
 import { updateAlbum } from 'apis/api'
 
 
@@ -34,24 +33,10 @@ const AlbumForm = React.createClass({
 				hashHistory.push(`/gallery/${this.props.params.id}`)
 		})	
 
-
 	}, 
-
-	// updatePhotosAPI: function() { 
-	// 	var obj = {
-	// 		url: this.state.url
-
-	// 	}
-
-	// 	addPhotos(obj).then(function(resp) {
-	// 		hashHistory.push('/')
-	// 	})
-	// },
 
 	postToAPI: function() { 
 		this.updateAlbum()
-		// this.updatePhotosAPI()
-		// console.log(this.state)
 	},
 
 	render: function() {

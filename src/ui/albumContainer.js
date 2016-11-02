@@ -70,6 +70,3 @@ const AlbumsLayout = React.createClass({
 export default AlbumsContainerData 
 
 
-// href={"http://localhost:8001//newAlbums/" + this.props.params.id}
-
-

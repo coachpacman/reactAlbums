@@ -78,6 +78,16 @@
       "album_label": "Ryan Lee",
       "album_cover_pic": "http://www2.pictures.zimbio.com/gi/Ryan+Lee+WbY_FiOr_nBm.jpg",
       "id": 16
+    },
+    {
+      "album_label": "jason shabo",
+      "album_cover_pic": "http://starcasm.net/wp-content/uploads/2011/08/Jason_Sabo.jpg",
+      "id": 17
+    },
+    {
+      "album_label": "Carrie Smidt",
+      "album_cover_pic": "http://mlb.mlb.com/mlb/images/players/head_shot/123041.jpg",
+      "id": 18
     }
   ],
   "photos": [
