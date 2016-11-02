@@ -179,6 +179,25 @@ a {
 	margin-left: 26%;
 }
 
+.formInput {
+	width: 50%;
+	height: 25%;
+	display: block;
+	margin: auto;
+	margin-top: 83px;
+	font-size: 37px;
+	text-align: center;
+	border-radius: 5px;
+	border-left: 2px solid #EEEEEE;
+	border-top: 2px solid #EEEEEE;
+	outline: none;
+}
+
+.formInput:focus {
+	border: 3px solid #47DC19;
+	transition: border 0.2s;
+}
+
 
 
 

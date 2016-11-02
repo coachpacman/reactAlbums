@@ -41,7 +41,7 @@ const AlbumForm = React.createClass({
 
 	render: function() {
 		return (
-			<div>
+			<div id="albumHeader">Jamie's Gothic Photo Album
 				<input className="formInput" id="album_label" onChange={this.update} type="text" placeholder="Album Name"></input>
 				<input className="formInput" id="album_cover_pic" onChange={this.update} type="text" placeholder="Album Cover Pic URL"></input>
 				<button onClick={this.postToAPI}>Submit</button>
