@@ -11,7 +11,7 @@ const PhotoForm = React.createClass({
 	},
 
 	update: function(e) {
-		var obj = this.getInitialState
+		var obj = this.state
 		var id = e.target.id
 		obj[id] = e.target.value
 
@@ -25,20 +25,21 @@ const PhotoForm = React.createClass({
 		}
 
 		addPhotos(obj).then(function(resp) {
-			this.goBack
+			console.log("object passed to addPhotos()", obj)
+			// this.goBack
 		})
+		console.log("addPhotos() resp", resp)
 	},
 
-	goBack: function() { 
-		hashHistory.push(`/gallery/${this.props.params.id}`)
-	},
+	// goBack: function() { 
+	// 	hashHistory.push(`/gallery/${this.props.params.albumId}`)
+	// },
 
 	render: function() {
 		return (
 			<div>	
 				<input className="formInput" id="url" onChange={this.update} type="text" placeholder="photo URL"></input>
 				<button onClick={this.addPhoto}>Submit</button>
-				<button id="goBack" onClick={this.goBack}>Cancel</button>			
 			</div>
 		)
 	}
@@ -46,3 +47,5 @@ const PhotoForm = React.createClass({
 })
 
 export default PhotoForm
+
+// <button id="goBack" onClick={this.goBack}>Cancel</button>			

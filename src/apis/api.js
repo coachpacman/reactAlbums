@@ -66,7 +66,7 @@ export function updateAlbum(id, obj) {
 
 export function addPhotos(obj) {
 	return axios.post('photos', obj).then(function(resp) {
-		hashHistory.push(`/albums/${obj.albumId}`)
+		hashHistory.push(`/gallery/${obj.albumId}`)
 		store.dispatch({
 			type: 'ADD_PHOTOS',
 			url: resp.data.url,
