@@ -60,7 +60,7 @@ const AlbumsLayout = React.createClass({
 						})}
 				</div>
 			</div>
-			<a className="addButton" onClick={() => this.addAlbum()}><div>Add Album</div></a>
+			<a onClick={() => this.addAlbum()}><div className="addButton">Add Album</div></a>
 		</div>
 
 		)

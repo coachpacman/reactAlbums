@@ -151,10 +151,18 @@ a {
 	width: 100px;
 	background: red;
 	position: absolute;
-	top: 30%;
+	top: 34%;
 	left: 10%;
 }
 
 .addButton {
 	color: black;
+	text-align: center;
+	margin: auto;
+	margin-top: 25px;
+	font-size: 75px;
+	background: green;
+	width: 32%;
+	vertical-align: middle;
+	border-radius: 20px;
 }

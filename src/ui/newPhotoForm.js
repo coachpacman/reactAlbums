@@ -25,15 +25,9 @@ const PhotoForm = React.createClass({
 		}
 
 		addPhotos(obj).then(function(resp) {
-			console.log("object passed to addPhotos()", obj)
-			// this.goBack
 		})
-		console.log("addPhotos() resp", resp)
 	},
 
-	// goBack: function() { 
-	// 	hashHistory.push(`/gallery/${this.props.params.albumId}`)
-	// },
 
 	render: function() {
 		return (
@@ -48,4 +42,3 @@ const PhotoForm = React.createClass({
 
 export default PhotoForm
 
-// <button id="goBack" onClick={this.goBack}>Cancel</button>			
