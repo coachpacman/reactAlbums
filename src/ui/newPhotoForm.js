@@ -10,6 +10,12 @@ const PhotoForm = React.createClass({
 		}
 	},
 
+	goBack: function(e) {
+		e.preventDefault()
+		hashHistory.goBack()
+
+	},	
+
 	update: function(e) {
 		var obj = this.state
 		var id = e.target.id
@@ -31,9 +37,10 @@ const PhotoForm = React.createClass({
 
 	render: function() {
 		return (
-			<div>	
+			<div id="albumHeader" className="relative">Jamie's Gothic Photo Album
 				<input className="formInput" id="url" onChange={this.update} type="text" placeholder="photo URL"></input>
-				<button onClick={this.addPhoto}>Submit</button>
+				<button className="addButton photoForm" onClick={this.addPhoto}>Submit</button>
+				<button className="photoBack" onClick={this.goBack}>Cancel</button>
 			</div>
 		)
 	}

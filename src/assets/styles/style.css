@@ -200,6 +200,31 @@ a {
 
 }
 
+.photoForm {
+	top: 175%;
+	width: 29%;
+	height: 45%;
+	font-size: 58px;
+	border-right: none;
+}
+
+.photoBack {
+	height: 86px;
+	width: 106px;
+	background: #c5c2c2;;
+	position: absolute;
+	border-radius: 19px;
+	border: none;
+	top: 188%;
+	left: 64%;
+	border-bottom: 8px solid #888888;
+}
+
+.photoBack:hover {
+	background: #d01919;
+	border-bottom: 8px solid darkred;
+}
+
 .addButton2 {
 	margin-left: 7%;
 	border-right: none;
