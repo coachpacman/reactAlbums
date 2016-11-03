@@ -53,7 +53,9 @@ const PhotoGallery = React.createClass({
 
 	deletePhoto: function(e) {
 		var id = e.target.id
-		deletePhoto(id, this.props.albumId)
+		deletePhoto(id, this.props.albumId).then(resp => {
+			getPhotos(this.props.albumId)
+		})
 	},
 
 	render: function() {

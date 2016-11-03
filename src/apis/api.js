@@ -35,8 +35,7 @@ export function getPhoto(id) {
 	return axios.get(`photos/${id}`).then(function(resp) {
 		store.dispatch({
 			type: 'GET_PHOTO',
-			currentPhoto: resp.data.url,
-			currentPhotoId: resp.data.id
+			currentPhoto: resp.data
 		})
 	})
 }
@@ -78,9 +77,7 @@ export function addPhotos(obj) {
 
 
 export function deletePhoto(id, albumId) {
-	return axios.delete(`photos/${id}`).then(resp => {
-		getPhotos(albumId)
-	})
+	return axios.delete(`photos/${id}`)
 }
 
 

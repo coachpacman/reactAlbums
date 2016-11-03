@@ -26,7 +26,9 @@ gulp.task('serve:api', function (cb) {
 // Simple Server
 gulp.task('serve:web', serve({
   root: './dist',
-  port: config.get('server.port')
+  port: config.get('server.port'),
+  hostname: '0.0.0.0'
+
 }));
 
 // Watch for changes and reload stuff
