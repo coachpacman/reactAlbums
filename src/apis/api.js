@@ -44,6 +44,7 @@ export function getPhoto(id) {
 export function addAlbum(obj) {
 	return axios.post('albums', obj).then(function(resp) {
 		hashHistory.push(`/newAlbum/${resp.data.id}`)
+		console.log('addAlbum() axios.post')
 		store.dispatch({
 			type: 'ADD_ALBUM',
 			album_label: resp.data.album_label,

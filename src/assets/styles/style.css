@@ -158,21 +158,29 @@ a {
 .addButton {
 	color: black;
 	text-align: center;
-	margin: auto;
+	margin-bottom: 100px;
 	margin-top: 25px;
 	font-size: 75px;
-	background: white;
+	background: #c5c2c2;
+	border-bottom: 8px solid #888888;
 	transition: background 0.5s;
 	width: 32%;
 	vertical-align: middle;
 	border-radius: 20px;
-	border: none;
 	font-family: "Indie Flower", cursive;
+	position: absolute;
+	left: 34%;
 }
 
 .addButton:hover {
 	background: #47dc19;
+	border-bottom: 8px solid #309436
+}
 
+.addButton:active {
+	border-bottom: 0;
+	border-top: 0;
+	margin-top: 35px;
 }
 
 .addButton2 {

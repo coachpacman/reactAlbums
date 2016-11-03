@@ -40,6 +40,7 @@ const AlbumsLayout = React.createClass({
 		}
 
 		addAlbum(obj)
+		console.log("addAlbum()")
 	},
 
 	deleteAlbum: function(e) {
@@ -55,7 +56,7 @@ const AlbumsLayout = React.createClass({
 				<div className="albumRow">
 					{this.props.albums.map(item => {
 							return (
-							<div>
+							<div key={"a" + item.id}>
 								<Link key={"album" + item.id} to={"/gallery/" + item.id}>
 									<div key={"album" + item.id} className="albumThumb">
 										<img src={item.album_cover_pic}/>
@@ -68,7 +69,7 @@ const AlbumsLayout = React.createClass({
 						})}
 				</div>
 			</div>
-			<a onClick={() => this.addAlbum()}><div className="addButton">Add Album</div></a>
+			<a><div onClick={() => this.addAlbum()} className="addButton">Add Album</div></a>
 		</div>
 
 		)
