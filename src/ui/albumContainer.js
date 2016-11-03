@@ -56,14 +56,14 @@ const AlbumsLayout = React.createClass({
 				<div className="albumRow">
 					{this.props.albums.map(item => {
 							return (
-							<div key={"a" + item.id}>
+							<div key={"a" + item.id} className="relative">
 								<Link key={"album" + item.id} to={"/gallery/" + item.id}>
 									<div key={"album" + item.id} className="albumThumb">
 										<img src={item.album_cover_pic}/>
 										<div className="albumFooter">{item.album_label}</div>	
 									</div>
 								</Link>
-								<div id={item.id} onClick={this.deleteAlbum}>delete album</div>
+								<div id={item.id} onClick={this.deleteAlbum} className="deleteButton">delete album</div>
 							</div>
 							)
 						})}
