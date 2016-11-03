@@ -80,13 +80,13 @@ const PhotoGallery = React.createClass({
 					<div className="galleryRow">
 						{this.props.photos.map(item => {
 							return (
-								<div key={'p' + item.id}>
+								<div key={'p' + item.id} className="relative">
 									<Link key={"gallery button link" + item.id}to={"/gallery/photo/" + item.id}>
 										<div key={"photo" + item.id} className="photoThumb"><img src={item.url}/>
 											<div className="photoFooter">#{item.id}</div>
 										</div>
 									</Link>
-									<div id={item.id} onClick={this.deletePhoto}>delete photo</div>
+									<div id={item.id} onClick={this.deletePhoto} className="deleteButton">delete photo</div>
 								</div>
 							)
 						})}					
