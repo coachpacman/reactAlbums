@@ -1,6 +1,6 @@
 import React from 'react'
 import { hashHistory, Link } from 'react-router'
-import { getAlbumData, getData, getPhotos } from 'apis/api'
+import { getAlbumData, getData, getPhotos, deletePhoto } from 'apis/api'
 import store from 'store'
 
 
@@ -33,7 +33,6 @@ const GalleryContainer = React.createClass({
 	},
 
 	render: function() {
-		
 		return (
 			<PhotoGallery albumId={this.state.albumId} albums={this.state.albums} currentAlbumLabel={this.state.currentAlbumLabel} photos={this.state.photos}/>
 		)	
@@ -50,6 +49,11 @@ const PhotoGallery = React.createClass({
 	navToAddPhoto: function(e) {
 		e.preventDefault()
 		hashHistory.push(`/gallery/${this.props.albumId}/add`)
+	},
+
+	deletePhoto: function(e) {
+		var id = e.target.id
+		deletePhoto(id, this.props.albumId)
 	},
 
 	render: function() {
@@ -74,13 +78,16 @@ const PhotoGallery = React.createClass({
 				<div id="galleryContent">
 					<div id="galleryHeader">{this.props.currentAlbumLabel}</div>
 					<div className="galleryRow">
-						{this.props.photos.map(function(item) {
+						{this.props.photos.map(item => {
 							return (
-								<Link key={"gallery button link" + item.id}to={"/gallery/photo/" + item.id}>
-									<div key={"photo" + item.id} className="photoThumb"><img src={item.url}/>
-										<div className="photoFooter">#{item.id}</div>
-									</div>
-								</Link>
+								<div key={'p' + item.id}>
+									<Link key={"gallery button link" + item.id}to={"/gallery/photo/" + item.id}>
+										<div key={"photo" + item.id} className="photoThumb"><img src={item.url}/>
+											<div className="photoFooter">#{item.id}</div>
+										</div>
+									</Link>
+									<div id={item.id} onClick={this.deletePhoto}>delete photo</div>
+								</div>
 							)
 						})}					
 					</div>	
@@ -92,6 +99,7 @@ const PhotoGallery = React.createClass({
 })
 
 export default GalleryContainer
+
 
 
 

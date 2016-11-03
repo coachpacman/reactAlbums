@@ -76,3 +76,18 @@ export function addPhotos(obj) {
 }
 
 
+export function deletePhoto(id, albumId) {
+	return axios.delete(`photos/${id}`).then(resp => {
+		getPhotos(albumId)
+	})
+}
+
+
+export function deleteAlbum(id) {
+	return axios.delete(`albums/${id}`).then(resp => {
+		getData()
+	})
+}
+
+
+

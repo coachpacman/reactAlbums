@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { getData, addAlbum } from 'apis/api'
+import { getData, addAlbum, deleteAlbum } from 'apis/api'
 import store from 'store'
 
 const AlbumsContainerData = React.createClass({
@@ -40,6 +40,11 @@ const AlbumsLayout = React.createClass({
 		}
 
 		addAlbum(obj)
+	},
+
+	deleteAlbum: function(e) {
+		var id = e.target.id
+		deleteAlbum(id)
 	},	
 
 	render: function() {
@@ -48,14 +53,17 @@ const AlbumsLayout = React.createClass({
 			<div id="albumHeader">Jamie's Gothic Photo Album</div>
 			<div id="albumContainer">
 				<div className="albumRow">
-					{this.props.albums.map(function(item) {
+					{this.props.albums.map(item => {
 							return (
-							<Link key={"album" + item.id} to={"/gallery/" + item.id}>
-								<div key={"album" + item.id} className="albumThumb">
-									<img src={item.album_cover_pic}/>
-									<div className="albumFooter">{item.album_label}</div>	
-								</div>
-							</Link>
+							<div>
+								<Link key={"album" + item.id} to={"/gallery/" + item.id}>
+									<div key={"album" + item.id} className="albumThumb">
+										<img src={item.album_cover_pic}/>
+										<div className="albumFooter">{item.album_label}</div>	
+									</div>
+								</Link>
+								<div id={item.id} onClick={this.deleteAlbum}>delete album</div>
+							</div>
 							)
 						})}
 				</div>

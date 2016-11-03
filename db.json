@@ -29,76 +29,6 @@
       "id": 6,
       "album_cover_pic": "https://s-media-cache-ak0.pinimg.com/originals/61/fb/e3/61fbe3308f9f24a3112f1e79db4750cf.jpg",
       "album_label": "Architecture"
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 7
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 8
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 9
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 10
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 11
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 12
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 13
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 14
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 15
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 16
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 17
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 18
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 19
-    },
-    {
-      "album_label": "",
-      "album_cover_pic": "",
-      "id": 20
     }
   ],
   "photos": [
@@ -265,11 +195,6 @@
     {
       "url": "https://thepocketscroll.files.wordpress.com/2012/08/paris-week-1-084.jpg",
       "id": 39,
-      "albumId": 6
-    },
-    {
-      "url": "https://s-media-cache-ak0.pinimg.com/originals/96/fa/88/96fa88753bb61b5d9e9eabb1316b2111.png",
-      "id": 40,
       "albumId": 6
     },
     {
