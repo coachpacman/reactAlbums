@@ -147,12 +147,20 @@ a {
 }
 
 #goBack {
-	height: 100px;
-	width: 100px;
-	background: red;
+	height: 86px;
+	width: 106px;
+	background: #c5c2c2;;
 	position: absolute;
-	top: 34%;
-	left: 10%;
+	border-radius: 19px;
+	border: none;
+	top: 260%;
+	left: 64%;
+	border-bottom: 8px solid #888888;
+}
+
+#goBack:hover {
+	background: #d01919;
+	border-bottom: 8px solid darkred;
 }
 
 .addButton {
@@ -183,6 +191,15 @@ a {
 	margin-top: 35px;
 }
 
+.albumForm {
+	font-size: 50px;
+	width: 25%;
+	margin-top: 50px;
+	left: 38%;
+	border-right: none;
+
+}
+
 .addButton2 {
 	margin-left: 7%;
 	border-right: none;
@@ -190,21 +207,21 @@ a {
 
 .formInput {
 	width: 50%;
-	height: 25%;
+	height: 37%;
 	display: block;
 	margin: auto;
 	margin-top: 83px;
 	font-size: 37px;
 	text-align: center;
 	border-radius: 5px;
-	border-left: 2px solid #EEEEEE;
-	border-top: 2px solid #EEEEEE;
+	border: 5px solid #c5c2c2;
 	outline: none;
+	padding: 10px;
 }
 
 .formInput:focus {
 	border: 3px solid #47DC19;
-	transition: border 0.2s;
+	transition: border 1s;
 }
 
 .deleteButton {
